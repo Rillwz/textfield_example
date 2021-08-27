@@ -12,7 +12,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  TextEditingController controller = TextEditingController(text: 'nilai awal');
+  TextEditingController controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +27,11 @@ class _MyAppState extends State<MyApp> {
             children: [
               TextField(
                 controller: controller,
+                onChanged: (_) {
+                  setState(() {});
+                },
               ),
-              Text('data'),
+              Text(controller.text),
             ],
           ),
         ),
