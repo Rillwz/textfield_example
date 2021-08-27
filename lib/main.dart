@@ -26,6 +26,7 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             children: [
               TextField(
+                obscureText: true,
                 controller: controller,
                 onChanged: (_) {
                   setState(() {});
