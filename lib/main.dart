@@ -26,7 +26,27 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             children: [
               TextField(
-                maxLength: 5,
+                decoration: InputDecoration(
+                  fillColor: Colors.lightBlue[50],
+                  filled: true,
+                  icon: Icon(Icons.adb),
+                  suffix: Container(
+                    width: 5,
+                    height: 5,
+                    color: Colors.red,
+                  ),
+                  prefixIcon: Icon(Icons.person),
+                  // prefixText: 'Name: ',
+                  //prefixStyle: TextStyle(color: Colors.blue),
+                  labelText: 'Nama Lengkap',
+                  labelStyle: TextStyle(color: Colors.blue),
+                  hintText: 'Nama Lengkap-nya lhoh!',
+                  hintStyle: TextStyle(fontSize: 12),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                maxLength: 6,
                 obscureText: true,
                 controller: controller,
                 onChanged: (_) {
